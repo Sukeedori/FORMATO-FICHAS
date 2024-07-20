@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    background: #f0f5fd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+}
+
+#model_ficha{
+	width: 700px;
+}
+
+#encabezado{
+	width: 100%;
+    text-align: center;
+}
+
+#institucion{
+	margin: 20px;
+	width: 80%; /*overflow: hidden; (si no deseas sobreponer sobre icon img)*/
+}
+
+#institucion h1{
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+#institucion p {
+    margin-bottom: 4px; 
+    font-size: 12.5px;
+}
+
+#datos p,
+#datos-ingresar p {
+    margin-bottom: 6px;
+    font-size: 12.5px;
+    font-weight: normal;
+}
+
+#datos p strong {
+    font-weight: bold;
+}
+
+#id_encargado,
+#datos input,
+#datos-ingresar input {
+    font-size: 12px;
+    text-indent: 8px;
+    width: 200px;
+    margin-left: 5px;
+}
+
+#datos-ingresar #observaciones {
+    width: 70%;
+    height: 30px;
+}
+
+.icon{
+	margin-top: 15px;
+	margin-bottom: 15px;
+	width: 20%;
+	float: left;
+}
+
+.icon img{
+    margin: 15px 0 15px 25px;
+	float: left;
+}
+
+/*Tabla*/
+#tabla {
+    margin-top: 20px;
+}
+
+#tabla table {
+    border-collapse: collapse;
+}
+
+#tabla table td {
+    text-align: center;
+    border: 1px solid #AAB7B8;
+    padding: 5px;
+}
+
+#tabla table .titulos {
+    background: #EAEDED;
+    font-size: 13px;
+}
+
+#tabla table .filas {
+    font-size: 12.5px;
+    font-weight: 400;
+}
+
+/*Botones*/
+#btns {
+    margin: 20px 0 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#btns input{
+    border: none;
+    background: #1976d2;
+    color: #fff;
+    font-size: 13px;
+    padding: 8px 13px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#btns input:hover{
+    background: #0d47a1;
+}
+
+#btns input:nth-child(3){
+    background: #D22F19;
+}
+
+#btns input:nth-child(3):hover{
+    background: #bd3321;
+}
+
+#btns button{
+    border: none;
+    background: #35bb5b;
+    color: #fff;
+    font-size: 13px;
+    padding: 8px 13px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#btns button:hover{
+    background: #46a861;
+}
+
+.observacion-final{
+    position: relative;
+    top: 30px;
+    font-size: 12.5px;
+    font-weight: normal;
+    line-height: 20px;
+}
+
+.observacion-final p strong {
+    font-weight: bold;
+}
+
+/*Sección de firmas*/
+.firma-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 200px 0 10px;
+    font-size: 12.5px;
+    gap: 50px;
+}
+
+.firma {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: normal;
+}
+
+.linea {
+    display: block;
+    border-top: 1px solid #000; 
+    width: 200px; 
+    margin-bottom: 8px; 
+}
+
+.firma p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 12px;
+    font-style: italic;
+}
+
+@media print {
+    #btns,
+    #datos-ingresar,
+    #id_encargado{
+        display: none;
+    }
+
+    #id_encargado_text,
+    #observaciones_text,
+    .observacion-final {
+        display: inline !important;
+    }
+
+    .firma-section {
+        display: flex !important; 
+    }
+}

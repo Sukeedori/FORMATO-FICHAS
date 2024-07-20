@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/escudo-institucion.png">
+    <title>Ficha_Entrada_Mantenimiento-E.E.B.M.M.J.G.A</title>
+    <link rel="stylesheet" href="fichas_style.css">
+    <script src="fichas_script.js" defer></script>
+</head>
+<body>
+    <div id="model_ficha">
+        <div id="encabezado">
+            <div class="icon">
+                <img src="images/escudo-institucion.png" alt="Escudo Institución" width="80">
+            </div>
+            <div id="institucion">
+                <h1>Escuela de Educación Básica Municipal "Monseñor Jorge Guillermo Armijos"</h1>
+                <p><em><strong>Dirección:</strong> Barrio Conzacola / Loja - Ecuador</em></p>
+                <p><em><strong>Teléfono:</strong> 0986687381</em></p>
+                <p><em><strong>Asesoría e información:</strong> uemcc@hotmail.com / guillermoarmijos1964@gmail.com</em></p>
+            </div>
+        </div>
+
+        <div id="datos">
+            <p><strong>ID Ficha:</strong> 000001-2024</p>
+            <p><strong>Nombres y apellidos del encargado:</strong>
+                <select id="id_encargado" name="encargado" onchange="updateEncargadoText()">
+                    <option value="Juan Jose Benites Coronel">Juan Jose Benites Coronel</option>
+                    <option value="Luis Fabian Lima Armijos">Luis Fabian Lima Armijos</option>
+                </select>
+                <span id="id_encargado_text" style="display: none;"></span>
+            </p>
+        </div>
+
+        <div id="datos-ingresar">
+            <p><strong>Fecha de entrega:</strong> <input type="date" id="date"></p>
+            <p><strong>Nombres y apellidos del reportante:</strong> <input type="text" id="reportado" oninput="updateReportadoText()"></p>
+            <p><strong>Motivo de ingreso:</strong> <input type="text" id="m-ingreso"></p>
+            <p><strong>Condición física:</strong> <input type="text" id="c-fisica"></p>
+            <p><strong>Condición lógica:</strong> <input type="text" id="c-logica"></p>
+            <p><strong>Observaciones:</strong> <input type="text" id="observaciones" oninput="updateObservacionesText()"></p>
+        </div>
+
+        <div id="btns">
+            <input type="submit" value="Guardar">
+            <input type="submit" value="Guardar y salir">
+            <input type="submit" value="Cancelar">
+            <button type="button" onclick="window.print()">Imprimir</button>
+        </div>
+
+        <div id="tabla">
+            <table>
+                <tr class="titulos">
+                    <td><strong>Fecha de entrega</strong></td>
+                    <td><strong>Equipo</strong></td>
+                    <td><strong>Reportante</strong></td>
+                    <td><strong>Motivo de ingreso</strong></td>
+                    <td><strong>Condición física</strong></td>
+                    <td><strong>Condición lógica</strong></td>
+                </tr>
+                <tr class="filas">
+                    <td>19/07/2024</td>
+                    <td>16_Teclado_HP_KM-8101</td>
+                    <td>Lic. Romny Vinicio Solano Merino</td>
+                    <td>Teclas faltantes w-y-n</td>
+                    <td>Teclado sin teclas</td>
+                    <td>No posible el tecleado</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="observacion-final" style="display: none;">
+            <p><strong>Observaciones:</strong>
+            <span id="observaciones_text"></span>
+        </div>
+
+        <div class="firma-section" style="display: none;">
+            <div class="firma">
+                <span class="linea"></span>
+                <span id="reportado_text"></span>
+                <p>Reportante</p>
+            </div>
+            <div class="firma">
+                <span class="linea"></span>
+                <span id="firma_encargado_text"></span>
+                <p>Encargado</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
