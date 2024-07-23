@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/escudo-institucion.png">
+    <title>Ficha_Soporte_Mantenimiento-E.E.B.M.M.J.G.A</title>
+    <link rel="stylesheet" href="fichas_style.css">
+    <script src="fichas_script.js" defer></script>
+</head>
+<body>
+    <div id="model_ficha">
+        <div id="encabezado">
+            <div class="icon">
+                <img src="images/escudo-institucion.png" alt="Escudo Institución" width="80">
+            </div>
+            <div id="institucion">
+                <h1>Escuela de Educación Básica Municipal "Monseñor Jorge Guillermo Armijos"</h1>
+                <p><em><strong>Dirección:</strong> Barrio Conzacola / Loja - Ecuador</em></p>
+                <p><em><strong>Teléfono:</strong> 0986687381</em></p>
+                <p><em><strong>Asesoría e información:</strong> uemcc@hotmail.com / guillermoarmijos1964@gmail.com</em></p>
+            </div>
+        </div>
+
+        <div id="datos">
+            <p><strong>ID Ficha:</strong> 000001-2024</p>
+            <p><strong>Nombres y apellidos del encargado:</strong>
+                <select id="id_encargado" name="encargado" onchange="updateEncargadoText()">
+                    <option value="Juan Jose Benites Coronel">Juan Jose Benites Coronel</option>
+                    <option value="Luis Fabian Lima Armijos">Luis Fabian Lima Armijos</option>
+                </select>
+                <span id="id_encargado_text" style="display: none;"></span>
+            </p>
+        </div>
+
+        <div id="datos-ingresar">
+            <p><strong>Fecha del soporte:</strong> <input type="date" id="date"></p>
+            <p><strong>Resultado:</strong> <input type="text" id="m-resultado"></p>
+            <p><strong>Procedimiento:</strong> <input type="text" id="observaciones" oninput="updateObservacionesText()"></p>
+        </div>
+
+        <div id="btns">
+            <input type="submit" value="Guardar">
+            <input type="submit" value="Guardar y salir">
+            <input type="submit" value="Cancelar">
+            <button type="button" onclick="window.print()">Imprimir</button>
+        </div>
+
+        <div id="tabla">
+            <table>
+                <tr class="titulos">
+                    <td><strong>Fecha del soporte</strong></td>
+                    <td><strong>Equipo</strong></td>
+                    <td><strong>Resultado</strong></td>
+                    <td><strong>Procedimiento</strong></td>
+                </tr>
+                <tr class="filas">
+                    <td>19/07/2024</td>
+                    <td>16_Teclado_HP_KM-8101</td>
+                    <td>-----</td>
+                    <td>-----</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="observacion-final" style="display: none;">
+            <p><strong>Procedimiento:</strong>
+            <span id="observaciones_text"></span>
+        </div>
+
+        <div class="firma-section" style="display: none;">
+            <div class="firma">
+                <span class="linea"></span>
+                <span id="firma_encargado_text"></span>
+                <p>Encargado</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
